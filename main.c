@@ -10,7 +10,7 @@ int main()
     char cmd[100] = "";
     while(1) {
 	/* Prompt */
-	printf("Â¬> ");
+	printf("¬> ");
 	fgets(cmd, 100, stdin);
 	cmd[strcspn(cmd, "\n")] = 0;
 	/* Command handlers */
