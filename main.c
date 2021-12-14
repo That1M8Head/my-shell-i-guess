@@ -18,11 +18,11 @@ int main()
 	    puts("My Shell I Guess is a thing I made when I was bored and wanted to try making something only using Emacs.");
 	    puts("If you find My Shell I Guess useful... why?");
 	}
-	if (!strcmp(cmd, "licence") || !strcmp(cmd, "license")) {
+	else if (!strcmp(cmd, "licence") || !strcmp(cmd, "license")) {
 	    puts("My Shell I Guess is licensed under the GNU General Public Licence, version 3.\n"
 		 "You can get a copy of the licence at <https://gnu.org/licenses/gpl-3.0.html>.");
 	}
-	if (!strcmp(cmd, "commands")) {
+	else if (!strcmp(cmd, "commands")) {
 	    puts("Command list\n"
 	         "------------\n"
 	         "help     - Show help.\n"
@@ -30,8 +30,11 @@ int main()
 	         "commands - The command you just typed.\n"
 	         "exit     - Exit the program.");
 	}
-	if (!strcmp(cmd, "exit") || !strcmp(cmd, "quit")) {
+	else if (!strcmp(cmd, "exit") || !strcmp(cmd, "quit")) {
 	    break;
+	}
+	else {
+	    printf("'%s' can do nothing useful here.\n", cmd);
 	}
     }
 }
